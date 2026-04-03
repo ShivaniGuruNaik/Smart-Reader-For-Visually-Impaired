@@ -1,80 +1,85 @@
-# 🗣️ Smart Reader for the Visually Impaired
+🗣️ Smart Reader for the Visually Impaired
+=========================================
 
-![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4-C51A4A?style=for-the-badge&logo=raspberry-pi&logoColor=white)
-![OpenCV](https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white)
-![Tesseract](https://img.shields.io/badge/Tesseract-OCR-44791A?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
-![IEEE Published](https://img.shields.io/badge/Published-IEEE%20ICCCNT%202024-blue?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/Raspberry%20Pi-4-C51A4A?style=for-the-badge&logo=raspberry-pi&logoColor=white" alt="Raspberry Pi">
+  <img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white" alt="OpenCV">
+  <img src="https://img.shields.io/badge/Tesseract-OCR-4479A1?style=for-the-badge" alt="Tesseract">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+</p>
 
-> **Final Year Major Project | ECE, REVA University, Bengaluru**
-> Published at IEEE ICCCNT 2024, IIT Mandi · [View on IEEE Xplore](https://ieeexplore.ieee.org/document/10723858)
+<p align="center">
+  <img src="https://img.shields.io/badge/Published-IEEE%20ICCCNT%202024-blue?style=for-the-badge" alt="IEEE Published">
+  <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Status">
+</p>
 
 ---
 
 ## 📋 Table of Contents
 
-- [Overview](#-overview)
-- [Features](#-features)
-- [System Architecture](#-system-architecture)
-- [Hardware Components](#-hardware-components)
-- [Software Stack](#-software-stack)
-- [How It Works](#-how-it-works)
-- [Performance Metrics](#-performance-metrics)
-- [Installation & Setup](#-installation--setup)
-- [Usage](#-usage)
-- [Results & Gallery](#-results--gallery)
-- [Limitations](#-limitations)
-- [Future Enhancements](#-future-enhancements)
-- [Research Publication](#-research-publication)
-- [Contributors](#-contributors)
-- [License](#-license)
-- [Acknowledgments](#-acknowledgments)
+- [Overview](#-overview)  
+- [Project Context](#-project-context)  
+- [Features](#-features)  
+- [System Architecture](#-system-architecture)  
+- [Hardware Components](#-hardware-components)  
+- [Software Stack](#-software-stack)  
+- [How It Works](#-how-it-works)  
+- [Performance Metrics](#-performance-metrics)  
+- [Installation & Setup](#-installation--setup)  
+- [Usage](#-usage)  
+- [Results & Gallery](#-results--gallery)  
+- [Limitations](#-limitations)  
+- [Future Enhancements](#-future-enhancements)  
+- [Research Publication](#-research-publication)  
+- [Contributors](#-contributors)  
+- [License](#-license)  
+- [Acknowledgments](#-acknowledgments)  
+- [Contact & Support](#-contact--support)  
 
 ---
 
 ## 🌟 Overview
 
-**Smart Reader for the Visually Impaired** is an assistive technology device that empowers visually impaired individuals with independent reading capabilities. Built on a Raspberry Pi platform, it converts printed text into real-time audible speech using Optical Character Recognition (OCR) and Text-to-Speech (TTS) technologies.
+Smart Reader for the Visually Impaired is an assistive embedded system designed to give visually impaired users **independent reading capability** by converting printed text into real‑time speech.  
+Built on a Raspberry Pi platform, it uses a camera for text capture, OpenCV for preprocessing, Tesseract for OCR, and Festival for text‑to‑speech output.
 
-This project addresses the need for an affordable, portable, and accessible reading device — enabling users to engage with printed material independently, without sighted assistance.
+This project focuses on providing an **affordable, portable, and user‑friendly** alternative to expensive commercial reading devices, enabling visually impaired users to access printed information without constant sighted assistance.
 
-### 🎯 Project Context
+---
 
-| Detail | Info |
-|--------|------|
-| **Type** | Final Year Major Project |
-| **Department** | Electronics & Communication Engineering (ECE) |
-| **Institution** | REVA University, Bengaluru, India |
-| **Publication** | IEEE ICCCNT Conference 2024, IIT Mandi |
-| **DOI** | [10.1109/ICCCNT61001.2024.10723858](https://ieeexplore.ieee.org/document/10723858) |
+## 🎯 Project Context
+
+- **Type:** Final Year Major Project  
+- **Department:** Electronics & Communication Engineering (ECE)  
+- **Institution:** REVA University, Bengaluru, India  
+- **Publication:** IEEE ICCCNT 2024, IIT Mandi  
+- **Research Paper:** [View on IEEE Xplore](https://ieeexplore.ieee.org/document/10723858)
 
 ---
 
 ## ✨ Features
 
-- 🔍 **Real-Time Text Recognition** — 97.13% OCR accuracy tested on 100+ samples
-- 🔘 **One-Button Operation** — Simple push-button interface for ease of use
-- 🔊 **Audio Feedback** — Clear speech output via Bluetooth speaker
-- ⚡ **Fast Processing** — ~1.1 seconds per image (capture to audio)
-- 📦 **Portable Design** — Compact, self-contained unit in a custom enclosure
-- 💰 **Low Cost** — Built with off-the-shelf components
-- ♿ **Purpose-Built** — Specifically designed for visually impaired users
+- **Real‑Time Text Recognition:** OCR with average accuracy of **97.13%**  
+- **One‑Button Operation:** Simple push‑button GPIO interface for non‑technical users  
+- **Audio Feedback:** Clear TTS via Bluetooth speaker  
+- **Fast Processing:** ~**1.1 seconds** per image from capture to audio  
+- **Portable Design:** Compact and self‑contained with custom enclosure  
+- **Low Cost:** Built from easily available, off‑the‑shelf components  
+- **Embedded Integration:** Complete hardware‑software system on Raspberry Pi  
+- **Assistive Focus:** Designed specifically for visually impaired users
 
 ---
 
 ## 🏗️ System Architecture
 
-The Smart Reader follows a streamlined pipeline:
+**High‑Level Pipeline**
 
-```
-User Input (Button Press) → Image Capture → Preprocessing → OCR → TTS → Audio Output
-```
+> User Button Press → Image Capture → Preprocessing → OCR → Text‑to‑Speech → Audio Output
 
 ### Hardware Architecture
 
-```
+```text
 ┌─────────────────────┐
 │   Push Button       │
 │   (GPIO17)          │
@@ -95,79 +100,121 @@ User Input (Button Press) → Image Capture → Preprocessing → OCR → TTS �
 
 ### Software Pipeline
 
-```
+```text
 ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
 │    Camera    │───►│   OpenCV     │───►│  Tesseract   │───►│   Festival   │
-│   Capture   │    │  Processing  │    │     OCR      │    │     TTS      │
+│   Capture    │    │  Processing  │    │     OCR      │    │     TTS      │
 └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
-                          │                    │                    │
-                          ▼                    ▼                    ▼
-                   Grayscale/Blur      Text Extraction      Audio Generation
+
+       │                    │                    │
+       ▼                    ▼                    ▼
+Image acquisition    Image enhancement      Text extraction      Audio output
 ```
 
 ---
 
 ## 🔧 Hardware Components
 
-| Component | Specification | Purpose |
-|-----------|--------------|---------|
-| **Microprocessor** | Raspberry Pi 4 Model B (8GB RAM) | Main processing unit |
-| **Camera** | Logitech C270 HD Webcam (720p) | Image capture |
-| **Input Interface** | Metal LED Push Button | User trigger mechanism |
-| **Audio Output** | Bluetooth Speaker | Text-to-speech playback |
-| **Power Supply** | 5V/3A USB-C Adapter | System power |
-| **GPIO Connection** | GPIO17 with Pull-up Resistor | Button interface |
-| **Enclosure** | Custom 3D-printed housing | Device protection |
+| Component            | Specification                         | Purpose                      |
+|----------------------|---------------------------------------|------------------------------|
+| Microprocessor       | Raspberry Pi 4 Model B (8 GB RAM)     | Main processing unit         |
+| Camera               | Logitech C270 HD Webcam (720p)        | Image capture                |
+| Input Interface      | Metal LED Push Button (GPIO17)        | User trigger mechanism       |
+| Audio Output         | Bluetooth Speaker                     | Text‑to‑speech playback      |
+| Power Supply         | 5 V / 3 A USB‑C Adapter               | System power                 |
+| GPIO Connection      | GPIO17 with pull‑up resistor          | Button input interface       |
+| Enclosure            | Custom 3D‑printed / custom housing    | Mechanical protection, UX    |
 
 ---
 
 ## 💻 Software Stack
 
-| Layer | Technology | Version | Purpose |
-|-------|-----------|---------|---------|
-| **OS** | Raspberry Pi OS | Bullseye | Linux base |
-| **Language** | Python | 3.9+ | Core logic |
-| **Vision** | OpenCV | 4.x | Image preprocessing |
-| **OCR** | Pytesseract | 0.3.x | Text extraction |
-| **TTS** | Festival | 2.5 | Speech synthesis |
-| **GPIO** | RPi.GPIO | 0.7.x | Hardware control |
-| **Imaging** | PIL/Pillow | 9.x | Image handling |
+| Layer             | Technology        | Version  | Purpose                     |
+|-------------------|-------------------|----------|-----------------------------|
+| Operating System  | Raspberry Pi OS   | Bullseye | Base OS                     |
+| Programming       | Python            | 3.9+     | Core application logic      |
+| Computer Vision   | OpenCV            | 4.x      | Image preprocessing         |
+| OCR Engine        | Pytesseract       | 0.3.x    | Text extraction             |
+| TTS Engine        | Festival          | 2.5      | Speech synthesis            |
+| Hardware Control  | RPi.GPIO          | 0.7.x    | GPIO button handling        |
+| Image Processing  | PIL / Pillow      | 9.x      | Image manipulation          |
 
-### Key Python Libraries
+**Key Python Imports**
 
 ```python
-import cv2                  # Image processing
-import pytesseract          # OCR functionality
-import RPi.GPIO as GPIO     # Hardware control
-import subprocess           # TTS execution
-from PIL import Image       # Image handling
+import cv2                 # Image processing
+import pytesseract         # OCR functionality
+import RPi.GPIO as GPIO    # Hardware control
+import subprocess          # TTS execution
+from PIL import Image      # Image handling
+from time import sleep
 ```
 
 ---
 
 ## ⚙️ How It Works
 
-### Step-by-Step Process
+### 1. Initialization
 
-1. **Initialization** — System boots, GPIO configured, camera tested
-2. **User Interaction** — User places printed material under the camera and presses the button
-3. **Image Acquisition** — Webcam captures a high-resolution image
-4. **Preprocessing (OpenCV)** — Grayscale conversion → Gaussian blur → Contrast enhancement → Thresholding
-5. **Text Extraction (Tesseract)** — OCR processes the image and extracts text
-6. **Speech Synthesis (Festival)** — Extracted text is converted to audio and played via speaker
-7. **Ready State** — System loops back and waits for the next button press
+- Raspberry Pi boots and loads required libraries  
+- GPIO pin configured for the push button  
+- Camera initialized and tested  
+
+### 2. User Interaction
+
+- User places printed text under the camera  
+- User presses the GPIO push button (GPIO17)  
+
+### 3. Image Acquisition
+
+- Webcam captures a high‑resolution frame  
+- Image stored temporarily for processing  
+
+### 4. Preprocessing (OpenCV)
+
+- Convert to grayscale  
+- Apply Gaussian blur for noise reduction  
+- Enhance contrast  
+- Apply thresholding for clearer text regions  
+
+### 5. Text Extraction (Tesseract)
+
+- Preprocessed image sent to Tesseract  
+- OCR performs character recognition  
+- Extracted text cleaned and formatted  
+
+### 6. Speech Synthesis (Festival)
+
+- Extracted text passed to Festival TTS  
+- Audio stream generated  
+- Output delivered via Bluetooth speaker  
+
+### 7. Completion
+
+- System returns to ready state  
+- Waits for the next button press  
 
 ---
 
 ## 📊 Performance Metrics
 
-| Metric | Value |
-|--------|-------|
-| **Average OCR Accuracy** | 97.13% |
-| **Processing Time** | ~1.1 seconds per image |
-| **Optimal Font Size** | 10pt – 14pt |
-| **Language** | English (primary) |
-| **Test Samples** | 100+ |
+**Accuracy & Speed**
+
+| Metric                 | Value      | Notes                        |
+|------------------------|-----------:|------------------------------|
+| Average OCR Accuracy   | 97.13%     | Tested on 100+ samples       |
+| Processing Time        | ~1.1 s     | Capture → Audio output       |
+| Supported Fonts        | High       | Standard printed fonts       |
+| Language               | English    | Current implementation       |
+
+**Test Conditions**
+
+- Font Size: 10 pt – 14 pt (optimal)  
+- Lighting: Indoor natural/artificial lighting  
+- Text Type: Printed documents, books, labels  
+- Paper: Standard white / off‑white sheets  
+
+Global WHO data indicates that over **2.2 billion** people live with some form of vision impairment, highlighting the need for practical assistive reading devices like this system.
 
 ---
 
@@ -175,18 +222,19 @@ from PIL import Image       # Image handling
 
 ### Prerequisites
 
-- Raspberry Pi 4 Model B (2GB+ RAM)
-- Raspberry Pi OS (Bullseye or later)
-- Internet connection for initial setup
-- All hardware components assembled
+- Raspberry Pi 4 Model B (2 GB RAM minimum, 4–8 GB recommended)  
+- Raspberry Pi OS (Bullseye or later)  
+- Internet access for package installation  
+- Assembled hardware (Pi, camera, button, speaker, power)  
 
-### Step 1 — Update System
+### 1. Update System Packages
 
 ```bash
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update
+sudo apt-get upgrade -y
 ```
 
-### Step 2 — Install Dependencies
+### 2. Install Required Dependencies
 
 ```bash
 # Tesseract OCR
@@ -195,21 +243,21 @@ sudo apt-get install tesseract-ocr -y
 # Festival TTS
 sudo apt-get install festival -y
 
-# Python tools
+# Python + OpenCV
 sudo apt-get install python3-pip python3-opencv -y
 
 # Python libraries
 pip3 install pytesseract RPi.GPIO pillow
 ```
 
-### Step 3 — Enable Camera
+### 3. Configure Camera
 
 ```bash
 sudo raspi-config
 # Interface Options → Camera → Enable
 ```
 
-### Step 4 — GPIO Setup
+### 4. GPIO Setup (Example)
 
 ```python
 import RPi.GPIO as GPIO
@@ -219,45 +267,46 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 ```
 
-### Step 5 — Bluetooth Speaker
+### 5. Bluetooth Speaker Setup
 
 ```bash
 sudo apt-get install bluetooth bluez bluealsa -y
-
 bluetoothctl
-# > power on
-# > agent on
-# > scan on
-# > pair [MAC_ADDRESS]
-# > connect [MAC_ADDRESS]
+# power on
+# agent on
+# scan on
+# pair [MAC_ADDRESS]
+# connect [MAC_ADDRESS]
 ```
 
-### Step 6 — Hardware Assembly
+### 6. Hardware Assembly
 
-1. Connect push button to GPIO17 and GND
-2. Plug USB webcam into Raspberry Pi
-3. Pair and connect Bluetooth speaker
-4. Attach 5V power supply
-5. Mount components in enclosure
+- Connect push button between GPIO17 and GND (with pull‑up)  
+- Connect USB webcam to Raspberry Pi  
+- Pair Bluetooth speaker with Raspberry Pi  
+- Connect 5 V power supply  
+- Place everything into an enclosure (3D‑printed or custom)  
 
 ---
 
 ## 📖 Usage
+
+### Basic Operation
+
+1. Power on the Raspberry Pi  
+2. Wait for system initialization (~30 seconds)  
+3. Place printed text under the camera  
+4. Press the push button  
+5. Listen to the spoken output from the speaker  
+
+### Running the Application
 
 ```bash
 cd ~/smart-reader
 python3 smart_reader.py
 ```
 
-### Basic Operation
-
-1. **Power On** — Connect power supply
-2. **Wait** — System initializes (~30 seconds)
-3. **Position** — Place printed material under camera
-4. **Press Button** — Triggers image capture
-5. **Listen** — Device reads the text aloud
-
-### Core Code
+### Sample Code Structure
 
 ```python
 #!/usr/bin/env python3
@@ -268,6 +317,7 @@ import subprocess
 from time import sleep
 
 BUTTON_PIN = 17
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(BUTTON_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
@@ -283,21 +333,22 @@ def preprocess_image(image):
     return blur
 
 def extract_text(image):
-    return pytesseract.image_to_string(image)
+    text = pytesseract.image_to_string(image)
+    return text
 
 def text_to_speech(text):
     subprocess.call(['festival', '--tts'], input=text.encode())
 
 def main():
-    print("Smart Reader ready. Press button to scan.")
+    print("Smart Reader initialized. Press button to read.")
     try:
         while True:
             if GPIO.input(BUTTON_PIN) == GPIO.LOW:
-                print("Capturing...")
+                print("Button pressed! Capturing image...")
                 image = capture_image()
                 processed = preprocess_image(image)
                 text = extract_text(processed)
-                print(f"Detected: {text}")
+                print(f"Text detected: {text}")
                 text_to_speech(text)
                 sleep(1)
     except KeyboardInterrupt:
@@ -311,56 +362,58 @@ if __name__ == "__main__":
 
 ## 📸 Results & Gallery
 
-| Visual | Description |
-|--------|-------------|
-| `Final.jpg` | Fully assembled Smart Reader prototype |
-| `Hardware_Architecture.jpg` | Component interconnection diagram |
-| `Flowdiagram.png` | End-to-end process flow |
-| `Picture_taken.png` | Real-time OCR capture demo |
-| `Average.png` | Accuracy and speed analysis chart |
-| `Connections.png` | GPIO and peripheral wiring guide |
+_Add the following into a `docs/` or `images/` folder and link here:_
+
+- Final assembled device photos  
+- Internal hardware layout  
+- System architecture diagram  
+- Example screenshots of OCR outputs  
+- Demo snapshots (or GIFs) of live usage  
 
 ---
 
 ## ⚠️ Limitations
 
-- Handwritten / cursive text has reduced accuracy
-- Font sizes below 10pt may not be reliably recognized
-- English-only OCR in current version
-- Performance degrades in poor lighting
-- Reflective surfaces and page curvature can affect results
-- Multi-column and artistic layouts may cause errors
+- **Handwritten Text:** Limited recognition for cursive or stylized handwriting  
+- **Small Fonts:** Accuracy drops for fonts smaller than ~10 pt  
+- **Language Support:** Currently optimized for English only  
+- **Lighting:** Performance degrades in very low or uneven lighting  
+- **Complex Layouts:** Multi‑column or decorative layouts may reduce OCR performance  
+- **Image Quality:** Blurry or low‑contrast images lower accuracy  
 
 ---
 
 ## 🔮 Future Enhancements
 
-- **Deep Learning OCR** — Improved accuracy for complex fonts and handwriting
-- **Multilingual Support** — Regional Indian languages and 10+ major languages
-- **Object Detection** — Scene description and currency recognition
-- **Hardware Upgrades** — Auto-focus camera, rechargeable battery, haptic feedback
-- **AI Integration** — Document summarization and context-aware reading
-- **Mobile App** — Android/iOS companion app
-- **Voice Commands** — Hands-free operation
-- **Braille Output** — Hardware braille display integration
+- **Deep Learning OCR:** Improve robustness and handwriting support with neural OCR  
+- **Multilingual Support:** Add Indian regional languages and auto language detection  
+- **Advanced Features:** Object detection, currency recognition, QR/Barcode reading  
+- **Hardware Upgrades:** Auto‑focus camera, rechargeable battery, haptic feedback  
+- **AI Integration:** Summarization of long documents, context‑aware reading, Q&A  
+- **Connectivity:** Companion mobile app and optional cloud processing  
+- **Accessibility:** Voice‑command control, digital document (PDF) support, Braille output integration  
 
 ---
 
 ## 📚 Research Publication
 
-**Title**: Smart Reader / SpeakEasy Reader — OCR-Based Assistive Device for Visually Impaired  
-**Conference**: 15th IEEE International Conference on Computing, Communication and Networking Technologies (ICCCNT 2024)  
-**Venue**: IIT Mandi, India  
-**DOI**: [10.1109/ICCCNT61001.2024.10723858](https://ieeexplore.ieee.org/document/10723858)
+This work is published as a peer‑reviewed paper:
 
-### BibTeX Citation
+- **Title:** Smart Reader / SpeakEasy Reader — OCR‑Based Assistive Device for Visually Impaired  
+- **Conference:** 15th IEEE International Conference on Computing, Communication and Networking Technologies (ICCCNT 2024)  
+- **Venue:** IIT Mandi, India  
+- **DOI:** [10.1109/ICCCNT61001.2024.10723858](https://ieeexplore.ieee.org/document/10723858)
+
+**Abstract (Short)**  
+An affordable, portable OCR‑based reading device for visually impaired users is presented, achieving ~97.13% OCR accuracy and ~1.1 s processing time per page, offering a practical alternative to high‑cost commercial solutions.
+
+**Citation**
 
 ```bibtex
 @inproceedings{harsha2024smartreader,
   title     = {Smart Reader: OCR-Based Assistive Device for Visually Impaired},
-  author    = {Harsha, Kuragayala Sree and Naik, Shivani Guru and Tauseef, Md},
-  booktitle = {2024 15th International Conference on Computing Communication
-               and Networking Technologies (ICCCNT)},
+  author    = {Kuragayala Sree Harsha and Shivani Guru Naik and Md Tauseef},
+  booktitle = {2024 15th International Conference on Computing, Communication and Networking Technologies (ICCCNT)},
   year      = {2024},
   organization = {IEEE},
   doi       = {10.1109/ICCCNT61001.2024.10723858}
@@ -371,42 +424,88 @@ if __name__ == "__main__":
 
 ## 👥 Contributors
 
-| Name | Role |
-|------|------|
-| **Kuragayala Sree Harsha** | Hardware architecture, OCR/TTS pipeline, Raspberry Pi integration, GPIO programming, performance optimization, 3D enclosure design |
-| **Shivani Guru Naik** | Software development and testing, user interface design, hardware assembly, documentation, research, system deployment |
-| **Md Tauseef** | Component testing and validation, system deployment support |
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/SreeHarshaKuragayala">
+        <b>Kuragayala Sree Harsha</b>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ShivaniGuruNaik">
+        <b>Shivani Guru Naik</b>
+      </a>
+    </td>
+    <td align="center">
+      <b>Md Tauseef</b>
+    </td>
+  </tr>
+</table>
+
+### Roles & Responsibilities
+
+| Contributor            | Contributions                                                                                 |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| Kuragayala Sree Harsha| Hardware architecture · OCR & TTS pipeline · Raspberry Pi & GPIO programming · Optimization   |
+| Shivani Guru Naik      | Software development & testing · Hardware assembly & integration · Documentation · Co‑author |
+| Md Tauseef            | Component testing · Validation · System deployment support                                    |
 
 ---
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the **MIT License**.
+
+```text
+MIT License
+
+Copyright (c) 2024
+Kuragayala Sree Harsha, Shivani Guru Naik, Md Tauseef
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+[... full MIT license text ...]
+```
+
+(Include the full MIT text in your `LICENSE` file as well.)
 
 ---
 
 ## 🙏 Acknowledgments
 
-- **REVA University, Bengaluru** — For resources and academic support
-- **Department of ECE** — For project guidance and mentorship
-- **IEEE ICCCNT 2024 Committee** — For accepting our research
-- **IIT Mandi** — For hosting the conference
-- **OpenCV, Tesseract, Festival** — Open-source tools that made this possible
-- **Raspberry Pi Foundation** — For an accessible computing platform
-- **Our test users** — Visually impaired individuals who gave invaluable feedback
+- REVA University, Bengaluru – for infrastructure and academic support  
+- Department of ECE – for guidance and mentorship  
+- IEEE ICCCNT 2024 Committee – for accepting and hosting the work  
+- IIT Mandi – conference venue  
+- Open‑source communities behind OpenCV, Tesseract, and Festival  
+- Raspberry Pi Foundation – for the embedded computing platform  
+- Visually impaired users who provided feedback during testing  
 
 ---
 
-## 📞 Contact
+## 📞 Contact & Support
 
 **Shivani Guru Naik**  
-🎓 REVA University, Bengaluru | ECE Department  
-🔬 Co-author, IEEE ICCCNT 2024
+📧 Email: [shivanigurunaik@gmail.com](mailto:shivanigurunaik@gmail.com)  
+🐙 GitHub: [github.com/ShivaniGuruNaik](https://github.com/ShivaniGuruNaik)  
+🎓 Institution: REVA University, Bengaluru  
+🔬 Department: Electronics & Communication Engineering  
+📄 IEEE Co‑author: [ICCCNT 2024 Paper](https://ieeexplore.ieee.org/document/10723858)
 
 ---
 
-**Made with ❤️ for the visually impaired community**
+<p align="center">
+  <b>Made with ❤️ for the visually impaired community</b><br>
+  <sub>Empowering independence through technology</sub>
+</p>
 
-![Built with Raspberry Pi](https://img.shields.io/badge/Built%20with-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=raspberry-pi&logoColor=white)
-![Powered by Python](https://img.shields.io/badge/Powered%20by-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![IEEE Published](https://img.shields.io/badge/Published-IEEE-00629B?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/Built%20with-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=raspberry-pi&logoColor=white" alt="Built with Raspberry Pi">
+  <img src="https://img.shields.io/badge/Powered%20by-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Powered by Python">
+  <img src="https://img.shields.io/badge/Published-IEEE-00629B?style=for-the-badge" alt="Published IEEE">
+</p>
